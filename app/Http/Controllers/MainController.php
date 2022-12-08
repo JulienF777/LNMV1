@@ -16,16 +16,16 @@ class MainController extends Controller
                 session()->put('id',$user->first()->id);
                 $url=url('/');
                 $id=session('id');
-                $layout="layouts.topJC";
+                $layout="layouts.topjc";
                 return view('index',['url'=>$url,'id'=>$id,'layout'=>$layout]);
             }}
         $url=url('/');
         if(session('id')){
         $id=session('id');
-        $layout="layouts.topJC";
+        $layout="layouts.topjc";
         return view('index',['url'=>$url,'id'=>$id,'layout'=>$layout]);
         }else{
-            $layout="layouts.topJ";
+            $layout="layouts.topj";
             return view('index',['url'=>$url,'layout'=>$layout]);
         }
     }
