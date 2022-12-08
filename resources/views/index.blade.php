@@ -1,11 +1,11 @@
 @extends($layout)
 
 @section('css')
-<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/styles.css">
 @endsection
 
 @section('content')
-
+<div class="content" id="content">
 <div class="intro" >
   
   <h1>IUT de Lens</h1>
@@ -17,50 +17,60 @@
     <h1>19h - 23h</h1>
 
 
-    <img src="images/lune.png">
+    <img alt="lune" src="images/lune.png">
 
     <section class="buttons">
-      <a id="buttonresa">Je réserve mon billet</a>
+      <a href="/billet" id="buttonresa">Je réserve mon billet</a>
     </section>
 </div>
+
+<!-- <div class="round">
+  <img src="images/17.jpg">
+</div> -->
 
 <i id="arrow" class='bx bxs-down-arrow' ></i>
 
 <!-- concept -->
-<div id="elements">
-  <div class="toggleconcept">
-    <h2>Concept</h2>
-    <div class="concept">
-      <p>La nuit MMI regroupe la communauté des étudiants, des anciens étudiants et des professeurs de la formation autour d’un événement haut en couleurs.</p>  
-      <p>4 salles libre à la découverte exposeront les projets des actuels et anciens étudiants sur volontariat. </p>
-      <p>L'occasion révée pour montrer vos talents.</p>
-      <section class="buttons">
-        <a id="button2">Fermer</a>
-      </section>
-    </div>
+<div class="elements">
+  <div class="toggle-overlay">
+    <h2>Voir les projets</h2>
   </div>
 
 <!-- programme -->
-  <div class="toggleprogramme">
-    <h2>Programme</h2>
-    <div class="programme">
-    <p>19h30 Amphitéatre MMI: début de la soirée.</p>  
-    <p>20h00 salles X: Ouverture de l'exposition des travaux pendant toute la soirée et accès au buffet.</p>
-    <p>22h00 Amphitéatre MMI: projection d'un court-métrage étudiant.</p>
-    <section class="buttons">
-      <a id="button2">Fermer</a>
-      
-    </section>
+<div>
+    <h2>Je présente mon projet</h2>
   </div>
-  
-  <div>
-    <a href=""><h2>Portfolio ></h2></a>
+
+  </div>
   </div>
 
 
-  <div>
-    <a href=""><h2>FAQ ></h2></a>
-  </div>
 
 </div>
+</div>
+</div>
+
+<!-- overlay -->
+<div class="overlay"></div>
+
+<!-- menu projets -->
+<div class="project-menu">
+  <!-- menu items -->
+  <a href="#" class="menu-item">Web</a>
+  <a href="#" class="menu-item">Vidéo</a>
+  <a href="#" class="menu-item">Image</a>
+  <a href="#" class="menu-item">Son</a>
+
+  <!-- Create the "retour" menu item -->
+  <a href="#" class="menu-item retour">Retour</a>
+</div>
+
+<div class="mentions">
+  <a href="mentions">mentions légales</a>
+</div>
+
+<!-- projects ON-->
+<div class="grid">
+</div>
+
 @endsection

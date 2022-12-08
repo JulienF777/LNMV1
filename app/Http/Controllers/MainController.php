@@ -35,4 +35,9 @@ class MainController extends Controller
         $id=session('id');
         return view('mauvaisuser',['url'=>$url,'id'=>$id]);
     }
+
+
+    public function mentions(){
+        return view('mentions');
+    }
 }

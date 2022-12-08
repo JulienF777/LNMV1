@@ -50,3 +50,5 @@ Route::get('mauvaisuser',[MainController::class,'mauvaisuser']);
 
 Route::get('modifyacc',[Users::class,'modifyacc']);
 Route::post('modifyaccT',[Users::class,'modifyaccT']);
+
+Route::get('/mentions', [MainController::class, 'mentions']);

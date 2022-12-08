@@ -14,7 +14,9 @@
 
 <body>
   <section class="title">
+    <a href="/index">
       <img src="/images/logosf.png" />
+      </a>
     </section>
   <section class="content">
     @yield('content')
