@@ -52,6 +52,7 @@ const mentions = document.querySelector('.mentions');
     body.classList.toggle('active');
     mentions.classList.toggle('active');
 
+    afficherprojets();
   })
 })
 
@@ -76,5 +77,48 @@ function afficherprojets(){
           grid.append(projet1);
 }
 }
-afficherprojets();
 
+
+  
+  // Use setInterval() to call the logPageYOffset function every 1 second
+
+  let height20p = 80*window.devicePixelRatio;
+  window.onscroll = function(ev) {
+    // Check if the user has scrolled down the page and reached the bottom
+    function updateInnerHeight() {
+      window.innerHeight = window.innerHeight;
+    }
+    // Listen for the resize event and call the updateInnerHeight function whenever it occurs
+    window.addEventListener('resize', updateInnerHeight);
+
+    // (window.pageYOffset > height20p &&
+    if ((window.innerHeight + window.pageYOffset) >= grid.offsetHeight) {
+      const grid = document.querySelector('.grid');
+      for(i=0; i<=urls.length-1; i++){
+        const projet1 = document.createElement("div");
+        projet1.classList.add('p'+i);
+  
+        const img1 = document.createElement("img");
+        img1.src = urls[i];
+        img1.style.width = '100%';
+        img1.style.borderRadius = '50vw';
+  
+        projet1.style.gridAutoColumns = 'auto';
+        projet1.style.gridAutoRows = 'auto';
+
+        projet1.append(img1);
+        grid.append(projet1);
+      }
+      // height20p = height20p + 625;
+    }
+  };
+
+  
+  function logPageYOffset() {
+    console.log('Yoffset '+window.pageYOffset);
+    // console.log('height20p '+height20p);
+    console.log('windows innerheight '+window.innerHeight);
+    console.log('grid Height '+grid.offsetHeight);
+
+  }
+  setInterval(logPageYOffset, 500);
