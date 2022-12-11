@@ -1,4 +1,9 @@
-const urls = ['images/17.jpg','images/5.jpg','images/6.jpg','images/2.jpg','images/1.jpg','images/3.jpg','images/4.jpg','images/7.jpg','images/8.jpg','images/9.jpg'];
+const t = JSON.parse(localStorage.getItem('projets'));
+console.log(t[1]);
+const urls=new Array();
+t.forEach(elt => urls.push(elt.img_url));
+// const urls = ['images/17.jpg','images/5.jpg','images/6.jpg','images/2.jpg','images/1.jpg','images/3.jpg','images/4.jpg','images/7.jpg','images/8.jpg','images/9.jpg'];
+console.log(urls);
 
 let minleft = 2;
 let maxleft = 20;
@@ -7,7 +12,7 @@ let maxhauteur = 50;
 
 const animationprojects = document.createElement("div");
 
-for(i=0; i<=urls.length-1; i++){
+for(let i=0; i<=urls.length-1; i++){
 
 const content1 = document.getElementById('content');
 
@@ -60,7 +65,7 @@ const mentions = document.querySelector('.mentions');
 
 function afficherprojets(){
   const grid = document.querySelector('.grid');
-            for(i=0; i<=urls.length-1; i++){
+            for(let i=0; i<=urls.length-1; i++){
           const projet1 = document.createElement("div");
           projet1.classList.add('p'+i);
 

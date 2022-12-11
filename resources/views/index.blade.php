@@ -5,6 +5,10 @@
 @endsection
 
 @section('content')
+<script type='module'>
+  let t = {{$projets}};
+  localStorage.setItem('projets', JSON.stringify(t));
+</script>
 <div class="content" id="content">
 <div class="intro" >
   
