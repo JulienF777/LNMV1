@@ -28,7 +28,7 @@ class MainController extends Controller
         return view('index',['url'=>$url,'id'=>$id,'layout'=>$layout,'projets'=>json_encode($projets, JSON_HEX_QUOT)]);
         }else{
             $layout="layouts.topj";
-            return view('index',['url'=>$url,'layout'=>$layout,'projets'=>$projets]);
+            return view('index',['url'=>$url,'layout'=>$layout,'projets'=>json_encode($projets, JSON_HEX_QUOT)]);
         }
     }
 
