@@ -9,6 +9,11 @@ const genre=new Array();
 t.forEach(elt => genre.push(elt.genre));
 console.log(genre);
 
+const lien=new Array();
+t.forEach(elt => lien.push(elt.lien));
+console.log(lien);
+
+
 let minleft = 2;
 let maxleft = 20;
 let minhauteur = 2;
@@ -68,6 +73,8 @@ const mentions = document.querySelector('.mentions');
     else{
       const grid = document.querySelector(".grid");
       grid.remove();
+      //on enlève le bouton reset
+      document.querySelector('.menu-item.reset').classList.remove('active');
     }
   })
 })
@@ -79,9 +86,9 @@ function afficherprojets(){
   grid.classList.add('grid');
   grid.classList.add('active');
   body.append(grid);
-            for(let i=0; i<=urls.length-1; i++){
+          for(let i=0; i<=urls.length-1; i++){
           const projet1 = document.createElement("div");
-          projet1.classList.add('p'+i);
+          projet1.classList.add('p');
 
           const img1 = document.createElement("img");
           img1.src = urls[i];
@@ -90,12 +97,28 @@ function afficherprojets(){
           img1.style.aspectRatio = '1/1';
           img1.style.objectFit = 'cover';
 
+          const lien1 = document.createElement("a");
+          lien1.href = lien[i];
+          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.classList.add('lien')
+          lien1.style.display = 'none'
+
+          
+
           
           projet1.style.gridAutoColumns = 'auto';
           projet1.style.gridAutoRows = 'auto';
 
           projet1.append(img1);
+          projet1.append(lien1);
+          projet1.addEventListener('click', afficherprojet)
+          function afficherprojet(){
+            lien1.classList.toggle('active');
+            projet1.classList.toggle('active');
+            img1.classList.toggle('img1');
+          }
           grid.append(projet1);
+          moreproject()
 }
 }
  
@@ -127,7 +150,7 @@ function triweb(){
     for(i=0; i<=urls.length-1; i++){
       if(genre[i] == 'web'){
       const projet1 = document.createElement("div");
-      projet1.classList.add('p'+i);
+      projet1.classList.add('p');
 
       const img1 = document.createElement("img");
       img1.src = urls[i];
@@ -143,6 +166,9 @@ function triweb(){
       gridweb.append(projet1);
       body.append(gridweb);
       console.log('gridweb')
+      moreproject()
+      //on affiche le bouton reset
+      document.querySelector('.menu-item.reset').classList.add('active');
       }
     }
 }
@@ -174,7 +200,7 @@ function trivideo(){
     for(i=0; i<=urls.length-1; i++){
       if(genre[i] == 'video'){
       const projet1 = document.createElement("div");
-      projet1.classList.add('p'+i);
+      projet1.classList.add('p');
 
       const img1 = document.createElement("img");
       img1.src = urls[i];
@@ -190,6 +216,10 @@ function trivideo(){
       gridvideo.append(projet1);
       body.append(gridvideo);
       console.log('gridvideo')
+
+      //on affiche le bouton reset
+      document.querySelector('.menu-item.reset').classList.add('active');
+      moreproject()
       }
     }
 }
@@ -206,7 +236,7 @@ function triimages(){
     for(i=0; i<=urls.length-1; i++){
       if(genre[i] == 'images'){
       const projet1 = document.createElement("div");
-      projet1.classList.add('p'+i);
+      projet1.classList.add('p');
 
       const img1 = document.createElement("img");
       img1.src = urls[i];
@@ -222,6 +252,9 @@ function triimages(){
       gridimages.append(projet1);
       body.append(gridimages);
       console.log('gridimages')
+      //on affiche le bouton reset
+      document.querySelector('.menu-item.reset').classList.add('active');
+      moreproject()
       }
     }
 }
@@ -231,8 +264,9 @@ function triimages(){
 
 
  // Use setInterval() to call the logPageYOffset function every 1 second
-if(grid.classList.contains('active')){
 
+function moreproject(){
+  let grid = document.querySelector('.grid');
  let height20p = 80*window.devicePixelRatio;
  window.onscroll = function(ev) {
    // Check if the user has scrolled down the page and reached the bottom
@@ -250,7 +284,7 @@ if(grid.classList.contains('active')){
 
      for(i=0; i<=urls.length-1; i++){
        const projet1 = document.createElement("div");
-       projet1.classList.add('p'+i);
+       projet1.classList.add('p');
  
        const img1 = document.createElement("img");
        img1.src = urls[i];
@@ -264,8 +298,22 @@ if(grid.classList.contains('active')){
 
        projet1.append(img1);
        grid.append(projet1);
+       console.log('moreprojects()')
      }
      // height20p = height20p + 625;
    }
  };   
+}
+
+
+//bouton reset
+
+let resetbutton = document.querySelector('.reset')
+resetbutton.addEventListener('click', reset)
+function reset(){
+
+      const grid = document.querySelector(".grid");
+      grid.remove();
+      afficherprojets();
+  
 }

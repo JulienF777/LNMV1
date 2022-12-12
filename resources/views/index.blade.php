@@ -67,6 +67,7 @@
 
   <!-- Create the "retour" menu item -->
   <a href="#" class="menu-item retour">Retour</a>
+  <a href="#" class="menu-item reset"><i class='bx bx-reset'></i></a>
 </div>
 
 <div class="mentions">

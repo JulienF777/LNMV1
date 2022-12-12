@@ -104,23 +104,43 @@ li{
     grid-template-areas:none;
   }
   .grid.active{
+    position: relative;
     display: grid;
     padding: 10vw;
     gap: 5vw;
+    z-index: 2;
   }
   .project-menu.active{
     height: 10%;
+    
   }
-  .menu-item.retour{
-    display: none;
+  .project-menu.active a{
+    padding: 1vw 4.5vw;
   }
   
+  
+  .menu-item.retour{
+    position: absolute;
+    right: 2vw;
+    bottom: 125%;
+  }
+  .menu-item.reset{
+    display: none;
+    position: absolute;
+    left: 2vw;
+    bottom: 120%;
+  }
+  .menu-item.reset.active{
+    display: block;
+    transition: display 2s;
+  }
+  .menu-item.reset i{
+    font-size: 12vw;
+  }
   .menu-item{
     font-size: 6vw !important;
   }
-  .menu-item.retour{
-    bottom: 20vw;
-  }
+
 
   .elements>div h2 {
     font-size: 6vw;
@@ -168,6 +188,26 @@ li{
     z-index: +5;
     font-size: 10vw;
     padding: 30vw;
+  }
+
+  /*affichage des projets lors du click*/
+  .lien.active{
+    display: block !important;
+    font-size: 8vw;
+    text-align: center;
+    padding: 4vw;
+    text-decoration: underline;
+  }
+  .img1{
+    border-radius: 0 !important;
+    aspect-ratio:initial !important;
+  }
+  .p.active{
+    position: fixed;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
   }
 }
 
@@ -543,6 +583,7 @@ line-height: 16rem;
   "p4 p5 p6 p7"
 }
 .grid.active{
+  z-index: 10;
   opacity: 1;
   transition: 1s linear;
 }
@@ -640,6 +681,46 @@ line-height: 16rem;
   .programme.active{
     width: 32.4%;
   }
+  .menu-item {
+    padding: 1vw 4.5vw;
+    font-size: 2vw;
+    color: #fefadd;
+    text-decoration: none;
+  }
+  
+  .menu-item.retour {
+    position: absolute;
+    /* color: rgba(2,0,36,1);
+    background-color: #fefadd; */
+    border-radius: 1vw;
+    right: 0;
+  }
+  .menu-item.reset{
+    display: none;
+    position: absolute;
+    left: 0;
+  }
+  .menu-item.reset.active{
+    display: block;
+  }
+  
+  .lien.active{
+    display: block !important;
+    font-size: 3vw;
+    text-align: center;
+    padding: 4vw;
+    text-decoration: underline;
+  }
+  .img1{
+    border-radius: 0 !important;
+    aspect-ratio:initial !important;
+  }
+  .p.active{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    z-index: 10;
+  }
 }
 
 
@@ -699,20 +780,6 @@ line-height: 16rem;
   transition: opacity 1s ease-in-out;
 }
 
-.menu-item {
-  padding: 1vw 4.5vw;
-  font-size: 2vw;
-  color: #fefadd;
-  text-decoration: none;
-}
-
-.menu-item.retour {
-  position: absolute;
-  /* color: rgba(2,0,36,1);
-  background-color: #fefadd; */
-  border-radius: 1vw;
-  right: 0;
-}
 
 
 /*make projects disapear when overlay is toggled*/

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Cookie;
 class MainController extends Controller
 {
     public function index(){
-        $projets = projetsDB::select("idAuteur","img_url","genre")->get()->toArray();
+        $projets = projetsDB::select("idAuteur","img_url","genre","lien")->get()->toArray();
         if(isset($_COOKIE['token'])){
             $c=$_COOKIE['token'];
             $user=UsersDB::where('remember', '=', $c)->get();
