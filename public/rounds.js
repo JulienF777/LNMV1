@@ -57,18 +57,28 @@ const mentions = document.querySelector('.mentions');
     elements.classList.toggle('active');
     projectmenu.classList.toggle('active');
     animationprojects.classList.toggle('active');
-    grid.classList.toggle('active');
+
     body.classList.toggle('active');
     mentions.classList.toggle('active');
 
-    afficherprojets();
+    if(document.querySelector('.grid') == null)
+    {
+      afficherprojets();
+    }
+    else{
+      const grid = document.querySelector(".grid");
+      grid.remove();
+    }
   })
 })
 
 
 
 function afficherprojets(){
-  const grid = document.querySelector('.grid');
+  const grid = document.createElement("div");
+  grid.classList.add('grid');
+  grid.classList.add('active');
+  body.append(grid);
             for(let i=0; i<=urls.length-1; i++){
           const projet1 = document.createElement("div");
           projet1.classList.add('p'+i);
@@ -88,40 +98,7 @@ function afficherprojets(){
           grid.append(projet1);
 }
 }
-  // Use setInterval() to call the logPageYOffset function every 1 second
-
-  let height20p = 80*window.devicePixelRatio;
-  window.onscroll = function(ev) {
-    // Check if the user has scrolled down the page and reached the bottom
-    function updateInnerHeight() {
-      window.innerHeight = window.innerHeight;
-    }
-    // Listen for the resize event and call the updateInnerHeight function whenever it occurs
-    window.addEventListener('resize', updateInnerHeight);
-
-    // (window.pageYOffset > height20p &&
-    if ((window.innerHeight + window.pageYOffset) >= grid.offsetHeight) {
-      const grid = document.querySelector('.grid');
-      for(i=0; i<=urls.length-1; i++){
-        const projet1 = document.createElement("div");
-        projet1.classList.add('p'+i);
-  
-        const img1 = document.createElement("img");
-        img1.src = urls[i];
-        img1.style.width = '100%';
-        img1.style.borderRadius = '100vw';
-        img1.style.aspectRatio = '1/1';
-        img1.style.objectFit = 'cover';
-  
-        projet1.style.gridAutoColumns = 'auto';
-        projet1.style.gridAutoRows = 'auto';
-
-        projet1.append(img1);
-        grid.append(projet1);
-      }
-      // height20p = height20p + 625;
-    }
-  };
+ 
 
   
   // function logPageYOffset() {
@@ -140,8 +117,9 @@ function afficherprojets(){
 let web = document.getElementById('triweb');
 web.addEventListener('click', triweb)
 function triweb(){
-    const grid = document.querySelector('.grid');
-    grid.remove();
+  const grid = document.querySelector(".grid");
+  grid.remove();
+  
     let gridweb = document.createElement('div');
     gridweb.classList.add('grid')
     gridweb.classList.add('active')
@@ -186,8 +164,9 @@ function triweb(){
 let video = document.getElementById('trivideo');
 video.addEventListener('click', trivideo)
 function trivideo(){
-    const grid = document.querySelector('.grid');
-    grid.remove();
+  const grid = document.querySelector(".grid");
+  grid.remove();
+
     let gridvideo = document.createElement('div');
     gridvideo.classList.add('grid')
     gridvideo.classList.add('active')
@@ -215,11 +194,11 @@ function trivideo(){
     }
 }
 
-let images = document.getElementById('triimages');
-images.addEventListener('click', triimages)
+let images = document.getElementById('triimage');
+images.addEventListener('click', triimage)
 function triimages(){
-    const grid = document.querySelector('.grid');
-    grid.remove();
+  const grid = document.querySelector(".grid");
+  grid.remove();
     let gridimages = document.createElement('div');
     gridimages.classList.add('grid')
     gridimages.classList.add('active')
@@ -245,4 +224,48 @@ function triimages(){
       console.log('gridimages')
       }
     }
+}
+
+
+
+
+
+ // Use setInterval() to call the logPageYOffset function every 1 second
+if(grid.classList.contains('active')){
+
+ let height20p = 80*window.devicePixelRatio;
+ window.onscroll = function(ev) {
+   // Check if the user has scrolled down the page and reached the bottom
+   function updateInnerHeight() {
+     window.innerHeight = window.innerHeight;
+   }
+   // Listen for the resize event and call the updateInnerHeight function whenever it occurs
+   window.addEventListener('resize', updateInnerHeight);
+
+   // (window.pageYOffset > height20p &&
+  
+   if ((window.innerHeight + window.pageYOffset) >= grid.offsetHeight) {
+     const grid = document.createElement("div");
+     grid.classList.add('grid');
+
+     for(i=0; i<=urls.length-1; i++){
+       const projet1 = document.createElement("div");
+       projet1.classList.add('p'+i);
+ 
+       const img1 = document.createElement("img");
+       img1.src = urls[i];
+       img1.style.width = '100%';
+       img1.style.borderRadius = '100vw';
+       img1.style.aspectRatio = '1/1';
+       img1.style.objectFit = 'cover';
+ 
+       projet1.style.gridAutoColumns = 'auto';
+       projet1.style.gridAutoRows = 'auto';
+
+       projet1.append(img1);
+       grid.append(projet1);
+     }
+     // height20p = height20p + 625;
+   }
+ };   
 }

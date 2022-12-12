@@ -61,7 +61,7 @@
 <div class="project-menu">
   <!-- menu items -->
   <a href="#" id="triweb" class="menu-item">Web</a>
-  <a href="#" id="trivideo" class="menu-item">Vidéo et Son</a>
+  <a href="#" id="trivideo" class="menu-item">Vidéos</a>
   <a href="#" id="triimage" class="menu-item">Images</a>
 
 
@@ -74,7 +74,6 @@
 </div>
 
 <!-- projects ON-->
-<div class="grid">
-</div>
+
 
 @endsection
