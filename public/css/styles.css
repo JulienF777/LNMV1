@@ -201,6 +201,8 @@ li{
   .img1{
     border-radius: 0 !important;
     aspect-ratio:initial !important;
+    
+    transition: border-radius 0.1s;
   }
   .p.active{
     position: fixed;
@@ -708,18 +710,20 @@ line-height: 16rem;
     display: block !important;
     font-size: 3vw;
     text-align: center;
-    padding: 4vw;
+    padding: 2vw;
     text-decoration: underline;
   }
   .img1{
     border-radius: 0 !important;
     aspect-ratio:initial !important;
+    max-height: 32vw;
+    object-fit: contain !important;
+    transition: border-radius 0.1s;
   }
   .p.active{
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    z-index: 10;
+    position: fixed;
+    width: 55%;
+    left: 22%;
   }
 }
 

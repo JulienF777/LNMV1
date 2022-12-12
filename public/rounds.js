@@ -97,12 +97,7 @@ function afficherprojets(){
           img1.style.aspectRatio = '1/1';
           img1.style.objectFit = 'cover';
 
-          const lien1 = document.createElement("a");
-          lien1.href = lien[i];
-          lien1.innerHTML = 'Suivre le lien du projet';
-          lien1.classList.add('lien')
-          lien1.style.display = 'none'
-
+          
           
 
           
@@ -110,7 +105,14 @@ function afficherprojets(){
           projet1.style.gridAutoRows = 'auto';
 
           projet1.append(img1);
-          projet1.append(lien1);
+
+          const lien1 = document.createElement("a");
+          lien1.href = lien[i];
+          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.classList.add('lien')
+          lien1.style.display = 'none'
+          projet1.append(lien1);  
+          
           projet1.addEventListener('click', afficherprojet)
           function afficherprojet(){
             lien1.classList.toggle('active');
@@ -159,14 +161,30 @@ function triweb(){
       img1.style.aspectRatio = '1/1';
       img1.style.objectFit = 'cover';
 
+      
+
       projet1.style.gridAutoColumns = 'auto';
       projet1.style.gridAutoRows = 'auto';
 
       projet1.append(img1);
+
+      const lien1 = document.createElement("a");
+          lien1.href = lien[i];
+          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.classList.add('lien')
+          lien1.style.display = 'none'
+          projet1.append(lien1);
+
       gridweb.append(projet1);
       body.append(gridweb);
       console.log('gridweb')
       moreproject()
+      projet1.addEventListener('click', afficherprojet)
+          function afficherprojet(){
+            lien1.classList.toggle('active');
+            projet1.classList.toggle('active');
+            img1.classList.toggle('img1');
+          }
       //on affiche le bouton reset
       document.querySelector('.menu-item.reset').classList.add('active');
       }
@@ -209,14 +227,30 @@ function trivideo(){
       img1.style.aspectRatio = '1/1';
       img1.style.objectFit = 'cover';
 
+      
+
       projet1.style.gridAutoColumns = 'auto';
       projet1.style.gridAutoRows = 'auto';
 
       projet1.append(img1);
+
+      const lien1 = document.createElement("a");
+          lien1.href = lien[i];
+          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.classList.add('lien')
+          lien1.style.display = 'none'
+          projet1.append(lien1);
+
       gridvideo.append(projet1);
       body.append(gridvideo);
       console.log('gridvideo')
 
+      projet1.addEventListener('click', afficherprojet)
+          function afficherprojet(){
+            lien1.classList.toggle('active');
+            projet1.classList.toggle('active');
+            img1.classList.toggle('img1');
+          }
       //on affiche le bouton reset
       document.querySelector('.menu-item.reset').classList.add('active');
       moreproject()
@@ -245,13 +279,29 @@ function triimages(){
       img1.style.aspectRatio = '1/1';
       img1.style.objectFit = 'cover';
 
+      
+
       projet1.style.gridAutoColumns = 'auto';
       projet1.style.gridAutoRows = 'auto';
 
       projet1.append(img1);
+
+      const lien1 = document.createElement("a");
+          lien1.href = lien[i];
+          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.classList.add('lien')
+          lien1.style.display = 'none'
+          projet1.append(lien1);
+
       gridimages.append(projet1);
       body.append(gridimages);
       console.log('gridimages')
+      projet1.addEventListener('click', afficherprojet)
+          function afficherprojet(){
+            lien1.classList.toggle('active');
+            projet1.classList.toggle('active');
+            img1.classList.toggle('img1');
+          }
       //on affiche le bouton reset
       document.querySelector('.menu-item.reset').classList.add('active');
       moreproject()
@@ -292,11 +342,27 @@ function moreproject(){
        img1.style.borderRadius = '100vw';
        img1.style.aspectRatio = '1/1';
        img1.style.objectFit = 'cover';
+
+       
  
        projet1.style.gridAutoColumns = 'auto';
        projet1.style.gridAutoRows = 'auto';
 
+       projet1.addEventListener('click', afficherprojet)
+          function afficherprojet(){
+            lien1.classList.toggle('active');
+            projet1.classList.toggle('active');
+            img1.classList.toggle('img1');
+          }
        projet1.append(img1);
+
+       const lien1 = document.createElement("a");
+          lien1.href = lien[i];
+          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.classList.add('lien')
+          lien1.style.display = 'none'
+          projet1.append(lien1);
+
        grid.append(projet1);
        console.log('moreprojects()')
      }
