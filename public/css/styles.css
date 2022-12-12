@@ -119,6 +119,10 @@ li{
   }
   .hamburger{
     display: block;
+    z-index: 10;
+  }
+  .nav-item .bx{
+    font-size: 10vw;
   }
   .hamburger.active .bar:nth-child(2){
     opacity: 0;
@@ -133,25 +137,28 @@ li{
   .nav-menu{
     position:fixed;   
     left:-100%;
-    top: 70px;
+    top: 0;
     gap: 0;
     flex-direction: column;
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    border-radius: 5rem;
   }
   .nav-item{
     margin: 16px 0;
   }
+  .navbar a{
+    font-size: 10vw;
+  }
   /* on affiche le menu */
   .nav-menu.active{
     left: 0;
-    top: 10%;
+    top: 0;
     background-color: #381c79;
-    height: 89%;
+    height: 100%;
     z-index: +5;
     font-size: 10vw;
+    padding: 30vw;
   }
 }
 
