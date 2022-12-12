@@ -24,7 +24,7 @@
     <img alt="lune" src="images/lune.png">
 
     <section class="buttons">
-      <a href="/billet" id="buttonresa">Je réserve mon billet</a>
+      <a href="/afficherqrcode" id="buttonresa">Je réserve mon billet</a>
     </section>
 </div>
 

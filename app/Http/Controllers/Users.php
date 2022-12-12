@@ -33,14 +33,14 @@ class Users extends Controller
     }
     function login(){
         if(session('id')){
-            return redirect('/projets');
+            return redirect('/');
         }
         return view('login');
     }
 
     function loginT(){
         if(session('id')){
-            return redirect('/projets');
+            return redirect('/');
         }
         if (!isset($_POST['mail']) || !isset($_POST['pwd'])) {
             return redirect('/login');    
@@ -60,7 +60,7 @@ class Users extends Controller
                   setcookie('token', $token, time() - 3600 );
               }
               UsersDB::where('id',$user->first()->id)->update(['remember'=>$token]);
-                return redirect('/projets');    
+                return redirect('/index');    
             } else {
               
               return redirect('/login');    
@@ -166,19 +166,24 @@ class Users extends Controller
     }
 
     public function afficherqrcode(){
-        $id=session('id');
-        $result=UsersDB::select('qrcodetoken','prenom')->where('id',$id)->get();
-        if($result->count()==1){
-            $token=$result->first()->qrcodetoken;
-            $lienimg=url('/checkqrcode').'/'.$token;
-            $qrcode = QrCode::size(200)
-                            ->color(254,250,221)
-                            ->backgroundcolor(13,15,44)
-                            ->generate($lienimg);
-            return view('invitation',['url'=>$lienimg,'qrcode'=>$qrcode,"prenom"=>$result->first()->prenom,'id'=>$id]);
+        if(session('id')){
+            $id=session('id');
+            $result=UsersDB::select('qrcodetoken','prenom')->where('id',$id)->get();
+            if($result->count()==1){
+                $token=$result->first()->qrcodetoken;
+                $lienimg=url('/checkqrcode').'/'.$token;
+                $qrcode = QrCode::size(200)
+                                ->color(254,250,221)
+                                ->backgroundcolor(13,15,44)
+                                ->generate($lienimg);
+                return view('invitation',['url'=>$lienimg,'qrcode'=>$qrcode,"prenom"=>$result->first()->prenom,'id'=>$id]);
+            }else{
+                return redirect('/genqrcode');
+            }
         }else{
-            return redirect('/genqrcode');
+            return redirect('/login');
         }
+        
     }
 
     public function afficherpdfqrcode(){
