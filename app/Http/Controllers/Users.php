@@ -60,7 +60,7 @@ class Users extends Controller
                   setcookie('token', $token, time() - 3600 );
               }
               UsersDB::where('id',$user->first()->id)->update(['remember'=>$token]);
-                return redirect('/projets');    
+                return redirect('/index');    
             } else {
               
               return redirect('/login');    
