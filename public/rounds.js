@@ -5,10 +5,14 @@ t.forEach(elt => urls.push(elt.img_url));
 // const urls = ['images/17.jpg','images/5.jpg','images/6.jpg','images/2.jpg','images/1.jpg','images/3.jpg','images/4.jpg','images/7.jpg','images/8.jpg','images/9.jpg'];
 console.log(urls);
 
+const genre=new Array();
+t.forEach(elt => genre.push(elt.genre));
+console.log(genre);
+
 let minleft = 2;
 let maxleft = 20;
 let minhauteur = 2;
-let maxhauteur = 50;
+let maxhauteur = 50;  
 
 const animationprojects = document.createElement("div");
 
@@ -84,9 +88,6 @@ function afficherprojets(){
           grid.append(projet1);
 }
 }
-
-
-  
   // Use setInterval() to call the logPageYOffset function every 1 second
 
   let height20p = 80*window.devicePixelRatio;
@@ -123,11 +124,125 @@ function afficherprojets(){
   };
 
   
-  function logPageYOffset() {
-    console.log('Yoffset '+window.pageYOffset);
-    // console.log('height20p '+height20p);
-    console.log('windows innerheight '+window.innerHeight);
-    console.log('grid Height '+grid.offsetHeight);
+  // function logPageYOffset() {
+  //   console.log('Yoffset '+window.pageYOffset);
+  //   // console.log('height20p '+height20p);
+  //   console.log('windows innerheight '+window.innerHeight);
+  //   console.log('grid Height '+grid.offsetHeight);
 
-  }
-  setInterval(logPageYOffset, 500);
+  // }
+  // setInterval(logPageYOffset, 500);
+
+
+
+  //le tri
+
+let web = document.getElementById('triweb');
+web.addEventListener('click', triweb)
+function triweb(){
+    const grid = document.querySelector('.grid');
+    grid.remove();
+    let gridweb = document.createElement('div');
+    gridweb.classList.add('grid')
+    gridweb.classList.add('active')
+
+    for(i=0; i<=urls.length-1; i++){
+      if(genre[i] == 'web'){
+      const projet1 = document.createElement("div");
+      projet1.classList.add('p'+i);
+
+      const img1 = document.createElement("img");
+      img1.src = urls[i];
+      img1.style.width = '100%';
+      img1.style.borderRadius = '100vw';
+      img1.style.aspectRatio = '1/1';
+      img1.style.objectFit = 'cover';
+
+      projet1.style.gridAutoColumns = 'auto';
+      projet1.style.gridAutoRows = 'auto';
+
+      projet1.append(img1);
+      gridweb.append(projet1);
+      body.append(gridweb);
+      console.log('gridweb')
+      }
+    }
+}
+
+// if (genre[0] == 'web') {
+//   console.log('test genre0 = web   '+genre[0])
+// }
+// if (genre[1] == 'web') {
+//   console.log('test genre1 = web   '+genre[1])
+// }
+// if (genre[2] == 'web') {
+//   console.log('test genre2 = web   '+genre[2])
+// }
+
+// if(typeof grid2 !== 'undefined'){
+//   grid2.remove();
+// }
+
+let video = document.getElementById('trivideo');
+video.addEventListener('click', trivideo)
+function trivideo(){
+    const grid = document.querySelector('.grid');
+    grid.remove();
+    let gridvideo = document.createElement('div');
+    gridvideo.classList.add('grid')
+    gridvideo.classList.add('active')
+
+    for(i=0; i<=urls.length-1; i++){
+      if(genre[i] == 'video'){
+      const projet1 = document.createElement("div");
+      projet1.classList.add('p'+i);
+
+      const img1 = document.createElement("img");
+      img1.src = urls[i];
+      img1.style.width = '100%';
+      img1.style.borderRadius = '100vw';
+      img1.style.aspectRatio = '1/1';
+      img1.style.objectFit = 'cover';
+
+      projet1.style.gridAutoColumns = 'auto';
+      projet1.style.gridAutoRows = 'auto';
+
+      projet1.append(img1);
+      gridvideo.append(projet1);
+      body.append(gridvideo);
+      console.log('gridvideo')
+      }
+    }
+}
+
+let images = document.getElementById('triimages');
+images.addEventListener('click', triimages)
+function triimages(){
+    const grid = document.querySelector('.grid');
+    grid.remove();
+    let gridimages = document.createElement('div');
+    gridimages.classList.add('grid')
+    gridimages.classList.add('active')
+
+    for(i=0; i<=urls.length-1; i++){
+      if(genre[i] == 'images'){
+      const projet1 = document.createElement("div");
+      projet1.classList.add('p'+i);
+
+      const img1 = document.createElement("img");
+      img1.src = urls[i];
+      img1.style.width = '100%';
+      img1.style.borderRadius = '100vw';
+      img1.style.aspectRatio = '1/1';
+      img1.style.objectFit = 'cover';
+
+      projet1.style.gridAutoColumns = 'auto';
+      projet1.style.gridAutoRows = 'auto';
+
+      projet1.append(img1);
+      gridimages.append(projet1);
+      body.append(gridimages);
+      console.log('gridimages')
+      }
+    }
+}

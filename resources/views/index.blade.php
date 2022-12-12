@@ -60,10 +60,10 @@
 <!-- menu projets -->
 <div class="project-menu">
   <!-- menu items -->
-  <a href="#" class="menu-item">Web</a>
-  <a href="#" class="menu-item">Vidéo</a>
-  <a href="#" class="menu-item">Image</a>
-  <a href="#" class="menu-item">Son</a>
+  <a href="#" id="triweb" class="menu-item">Web</a>
+  <a href="#" id="trivideo" class="menu-item">Vidéo et Son</a>
+  <a href="#" id="triimage" class="menu-item">Images</a>
+
 
   <!-- Create the "retour" menu item -->
   <a href="#" class="menu-item retour">Retour</a>
