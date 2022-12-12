@@ -33,14 +33,14 @@ class Users extends Controller
     }
     function login(){
         if(session('id')){
-            return redirect('/projets');
+            return redirect('/');
         }
         return view('login');
     }
 
     function loginT(){
         if(session('id')){
-            return redirect('/projets');
+            return redirect('/');
         }
         if (!isset($_POST['mail']) || !isset($_POST['pwd'])) {
             return redirect('/login');    
