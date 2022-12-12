@@ -66,7 +66,7 @@
   <a href="#" class="menu-item">Son</a>
 
   <!-- Create the "retour" menu item -->
-  <a href="#" class="menu-item retour"><i class='bx bx-chevron-right'></i></a>
+  <a href="#" class="menu-item retour">Retour</a>
 </div>
 
 <div class="mentions">
