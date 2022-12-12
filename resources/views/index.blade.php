@@ -32,8 +32,6 @@
   <img src="images/17.jpg">
 </div> -->
 
-<i id="arrow" class='bx bxs-down-arrow' ></i>
-
 <!-- concept -->
 <div class="elements">
   <div class="toggle-overlay">
@@ -42,7 +40,9 @@
 
 <!-- programme -->
 <div>
+    <a href="/publish">
     <h2>Je présente mon projet</h2>
+    </a>
   </div>
 
   </div>
@@ -66,7 +66,7 @@
   <a href="#" class="menu-item">Son</a>
 
   <!-- Create the "retour" menu item -->
-  <a href="#" class="menu-item retour">Retour</a>
+  <a href="#" class="menu-item retour"><i class='bx bx-chevron-right'></i></a>
 </div>
 
 <div class="mentions">

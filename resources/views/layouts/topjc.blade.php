@@ -3,6 +3,7 @@
 <head>
     <title>La nuit MMI</title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="images/nuitmmisite.png" href="images/nuitmmisite.png" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>

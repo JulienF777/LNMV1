@@ -72,7 +72,9 @@ function afficherprojets(){
           const img1 = document.createElement("img");
           img1.src = urls[i];
           img1.style.width = '100%';
-          img1.style.borderRadius = '50vw';
+          img1.style.borderRadius = '100vw';
+          img1.style.aspectRatio = '1/1';
+          img1.style.objectFit = 'cover';
 
           
           projet1.style.gridAutoColumns = 'auto';
@@ -106,7 +108,9 @@ function afficherprojets(){
         const img1 = document.createElement("img");
         img1.src = urls[i];
         img1.style.width = '100%';
-        img1.style.borderRadius = '50vw';
+        img1.style.borderRadius = '100vw';
+        img1.style.aspectRatio = '1/1';
+        img1.style.objectFit = 'cover';
   
         projet1.style.gridAutoColumns = 'auto';
         projet1.style.gridAutoRows = 'auto';

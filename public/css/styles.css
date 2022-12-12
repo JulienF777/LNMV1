@@ -38,6 +38,7 @@ body.active{
 }
 .round>img{
   border-radius: 100%;
+  aspect-ratio: 1/1;
 }
 
 /* Responsive burger menu */
@@ -86,9 +87,35 @@ li{
   background-color: #fefadd;
 }
 @media(max-width:768px){
+  body{
+    overflow: auto;
+  }
   .grid{
+    display: none;
     grid-template-columns: 1fr;
     grid-template-areas:none;
+  }
+  .grid.active{
+    display: grid;
+    padding: 10vw;
+    gap: 5vw;
+  }
+  .project-menu.active{
+    height: 10%;
+  }
+  .menu-item.retour{
+    display: none;
+  }
+  
+  .menu-item{
+    font-size: 6vw !important;
+  }
+  .menu-item.retour{
+    bottom: 20vw;
+  }
+
+  .elements>div h2 {
+    font-size: 6vw;
   }
   .hamburger{
     display: block;

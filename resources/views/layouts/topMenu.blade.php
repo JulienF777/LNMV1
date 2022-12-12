@@ -34,7 +34,7 @@
         </div>
       </li>
 
-      <li>
+      <li class="nav-item">
         <a href="/login/">
         <i class='bx bxs-user'></i>
       </a>
