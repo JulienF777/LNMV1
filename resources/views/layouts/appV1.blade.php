@@ -7,6 +7,7 @@
     <title>La Nuit MMI</title>
     <link href="/css/normalize.css" rel="stylesheet">
     <link href="/css/public.css" rel="stylesheet">
+    <link rel="shortcut icon" type="images/nuitmmisite.png" href="images/nuitmmisite.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     @section('css')
