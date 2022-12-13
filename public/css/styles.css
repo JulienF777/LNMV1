@@ -561,7 +561,7 @@ line-height: 16rem;
   transition: right 1s ease-in-out, display 2s ease-in-out;
 }
 .elements>div{
-  margin-top: 32.2%;
+  margin-top: 34%;
 }
 
 
@@ -660,7 +660,7 @@ line-height: 16rem;
     color:#0d0f2b;
   }
  .elements{
-    width: 30%;
+    width: 37%;
     margin-top: 2.4vw;
     height: 0vw;
   }

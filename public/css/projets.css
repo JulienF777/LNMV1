@@ -1,6 +1,8 @@
 
 article.post {
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+  border-top: 0.5px solid #fefadd;
+  padding-top: 30px;
 }
 
 .allProjects{
@@ -12,11 +14,13 @@ article.post .auteur {
   display: inline-block;
   font-size: 1.4rem;
   padding: 5px;
+  color: #fefadd;
 }
 
 article.post img {
-  max-width: 100%;
-  max-height: 25rem;
+  width: 100%;
+  border-radius: 2vw;
+  margin: 10px 0;
 }
 
 article.post h3 {
