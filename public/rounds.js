@@ -10,7 +10,7 @@ t.forEach(elt => genre.push(elt.genre));
 console.log(genre);
 
 const lien=new Array();
-t.forEach(elt => lien.push("/createur/"+elt.idAuteur));
+t.forEach(elt => lien.push(elt.lien));
 console.log(lien);
 
 
@@ -63,7 +63,7 @@ const menutoggle = document.querySelector('.nav-menu');
     elements.classList.toggle('active');
     projectmenu.classList.toggle('active');
     animationprojects.classList.toggle('active');
-    menutoggle.classList.toggle('active');
+    menutoggle.classList.toggle('hide');
 
     body.classList.toggle('active');
     mentions.classList.toggle('active');
@@ -110,7 +110,7 @@ function afficherprojets(){
 
           const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Afficher le profil du créateur';
+          lien1.innerHTML = 'Suivre le lien du projet';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);  
@@ -172,7 +172,7 @@ function triweb(){
 
       const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Afficher le profil du créateur';
+          lien1.innerHTML = 'Suivre le lien du projet';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);
@@ -238,7 +238,7 @@ function trivideo(){
 
       const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Afficher le profil du créateur';
+          lien1.innerHTML = 'Suivre le lien du projet';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);
@@ -262,7 +262,7 @@ function trivideo(){
 
 let images = document.getElementById('triimage');
 images.addEventListener('click', triimage)
-function triimage(){
+function triimage   (){
   const grid = document.querySelector(".grid");
   grid.remove();
     let gridimages = document.createElement('div');
@@ -290,7 +290,7 @@ function triimage(){
 
       const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Afficher le profil du créateur';
+          lien1.innerHTML = 'Suivre le lien du projet';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);
@@ -360,7 +360,7 @@ function moreproject(){
 
        const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Afficher le profil du créateur';
+          lien1.innerHTML = 'Suivre le lien du projet';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);

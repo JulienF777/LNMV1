@@ -10,7 +10,7 @@
   <span class="callToAction">Partagez Votre Projet</span>
   <div class="explicatif">
     <div class="ex1">
-    <p>Indiquez un nom puis chargez une miniature / une capture du projet. Indiquez un lien pour pouvoir le consulter ou un lien vers un site personnel, un profil LinkedIn, Awwwards... </p>
+    <p>Indiquez un nom puis chargez une image / une capture du projet. Si nécessaire, indiquez un lien pour pouvoir le consulter (vidéo Youtube, site personnel, profil Instagram, LinkedIn, Awwwards...) </p>
     <p>Si vous ne souhaitez pas que votre projet soit lié à votre compte La nuit MMI, vous pouvez cocher "Poster anonymement"</p>
     </div>
   </div>
@@ -19,7 +19,7 @@
     <input type='text' name='nom' placeholder='Nom de votre Projet' class="champsform">
     @csrf
     <label class="file"><i class='bx bx-upload'></i>Charger une image<input type="file" id="file" name="img" accept="image/*"></label>
-    <input class="champsform" type='number' name='anneeReal' placeholder='Année de Réalisation de votre Projet' min="1990" max="2023" >
+    <input class="champsform" type='number' name='anneeReal' placeholder='Année de réalisation de votre projet' min="1990" max="2023" >
     <input class="champsform" type='text' name='lien' placeholder='Lien vers votre projet ou réseaux' required>
     <select name="genre" class="select" required>
       <option value="-1">--Le genre de votre projet--</option>

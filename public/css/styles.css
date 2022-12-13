@@ -57,7 +57,7 @@ li{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vw 4.5vw;
+  padding: 1vw 9vw 2vw 4vw;
 }
 .nav-menu{
   display: flex;
@@ -189,6 +189,9 @@ li{
     z-index: +5;
     font-size: 10vw;
     padding: 30vw;
+  }
+  .nav-menu.hide{
+    display: none;
   }
 
   /*affichage des projets lors du click*/
@@ -726,7 +729,7 @@ line-height: 16rem;
     width: 55%;
     left: 22%;
   }
-  .nav-menu.active{
+  .nav-menu.hide{
     display: none;
   }
 
