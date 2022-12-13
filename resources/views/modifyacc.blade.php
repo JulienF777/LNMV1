@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appV1')
 
 @section('css')
   <link href="/css/modify.css" rel="stylesheet">
