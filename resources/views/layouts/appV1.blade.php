@@ -9,7 +9,9 @@
     <link href="/css/public.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    @section('css')
 
+    @show
 </head>
 
 <body>
