@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="bvnhead">
-  <span>On se revoit le 5 Janvier {{$prenom}}</span>
+  <span>Voici votre QR code qui sera à présenter à votre arrivée. On se revoit le 5 Janvier {{$prenom}}</span>
   {{$qrcode}}
 </div>
 
