@@ -32,7 +32,7 @@ h3{
   font-family: comfortaa;
   padding: 1vw;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 body {
@@ -52,7 +52,9 @@ body {
     flex-direction: column;
 
 }
-
+p{
+  font-size: 2rem;
+}
 .publish{
   font-size: 168%;
   color: #fefadd;
