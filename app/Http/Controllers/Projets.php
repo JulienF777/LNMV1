@@ -84,7 +84,7 @@ class Projets extends Controller
                 if(isset($auteur)){
                     return view('createur',['projets'=>$projets,'auteur'=> $auteur,'myacc'=>$myacc,'id'=>session('id')]);
                 }else{
-                    return redirect('/projets');
+                    return redirect('/');
                 }
         }
         return redirect('/login');

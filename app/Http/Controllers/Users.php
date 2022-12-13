@@ -50,14 +50,14 @@ class Users extends Controller
 
     function register(){
         if(session('id')){
-            return redirect('/projets');
+            return redirect('/');
         }
         return view('register');
     }
 
     function registerT(){
         if(session('id')){
-            return redirect('/projets');
+            return redirect('/');
         }
         if (
         !isset($_POST['inscription']) ||

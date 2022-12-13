@@ -14,7 +14,7 @@
     @csrf
     <label class="file"><i class='bx bx-upload'></i>Charger une image<input type="file" id="file" name="img" accept="image/*"></label>
     <input class="champsform" type='number' name='anneeReal' placeholder='Année de Réalisation de votre Projet' min="1990" max="2023" >
-    <input class="champsform" type='text' name='lien' placeholder='Lien vers votre projet ou réseaux' required>
+    <input class="champsform" type='text' name='lien' placeholder='Lien vers votre projet (obligatoire si web ou video)'>
     <select name="genre" class="select" required>
       <option value="-1">--Le genre de votre projet--</option>
       <option value="web">Web</option>

@@ -10,7 +10,7 @@ t.forEach(elt => genre.push(elt.genre));
 console.log(genre);
 
 const lien=new Array();
-t.forEach(elt => lien.push(elt.lien));
+t.forEach(elt => lien.push("/createur/"+elt.idAuteur));
 console.log(lien);
 
 
@@ -110,7 +110,7 @@ function afficherprojets(){
 
           const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.innerHTML = 'Afficher le profil du créateur';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);  
@@ -172,7 +172,7 @@ function triweb(){
 
       const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.innerHTML = 'Afficher le profil du créateur';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);
@@ -238,7 +238,7 @@ function trivideo(){
 
       const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.innerHTML = 'Afficher le profil du créateur';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);
@@ -290,7 +290,7 @@ function triimage(){
 
       const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.innerHTML = 'Afficher le profil du créateur';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);
@@ -360,7 +360,7 @@ function moreproject(){
 
        const lien1 = document.createElement("a");
           lien1.href = lien[i];
-          lien1.innerHTML = 'Suivre le lien du projet';
+          lien1.innerHTML = 'Afficher le profil du créateur';
           lien1.classList.add('lien')
           lien1.style.display = 'none'
           projet1.append(lien1);

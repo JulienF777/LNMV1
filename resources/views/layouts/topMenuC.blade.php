@@ -6,14 +6,14 @@
       </div>
 
     <ul class="nav-menu">
-      <li class="nav-item">
-        <div class="toggleconcept">
-          <a href="/logout" class="nav-link">Déconnecter</a>
+    <li class="nav-item">
+        <div class="toggleprogramme">
+          <a href="/createur/{{$id}}" class="nav-link">Profil</a>
         </div>
       </li>
       <li class="nav-item">
-        <div class="toggleprogramme">
-          <a href="/createur/{{$id}}" class="nav-link">Profil</a>
+        <div class="toggleconcept">
+          <a href="/logout" class="nav-link">Déconnection</a>
         </div>
       </li>
     </ul>
