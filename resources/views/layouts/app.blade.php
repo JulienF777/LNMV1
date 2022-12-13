@@ -23,7 +23,4 @@
     @yield('content')
 
 </body>
-<script src="../menu.js"></script>
-<script src="../rounds.js"></script>
-<!-- <script src="../main.js"></script>  old thing-->
 </html>

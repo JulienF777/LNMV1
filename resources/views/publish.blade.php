@@ -2,13 +2,6 @@
 
 @section('css')
   <link href="/css/publish.css" rel="stylesheet">
-  <style>
-    @media screen and (min-width:1100px) {
-      body {
-        padding: 0 30% ;
-      }
-    }
-  </style>
 @endsection
 
 @section('content')
@@ -22,7 +15,7 @@
     <label class="file"><i class='bx bx-upload'></i>Charger une image<input type="file" id="file" name="img" accept="image/*"></label>
     <input class="champsform" type='number' name='anneeReal' placeholder='Année de Réalisation de votre Projet' min="1990" max="2023" >
     <input class="champsform" type='text' name='lien' placeholder='Lien vers votre projet (non obligatoire)'>
-    <label class="anonyme" for="anonyme"><input type="checkbox" id="anonyme" name="anonyme" value="anonyme"> Poster anonymement<span class="checkmark"></span></label>
+    <label class="anonyme" for="anonyme"><input type="checkbox" id="anonyme" name="anonyme" value="anonyme"> Poster anonymement</label>
     <input type='submit' name='publish' value='Publier'>
   </form>
   </div>

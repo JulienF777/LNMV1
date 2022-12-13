@@ -75,6 +75,7 @@
 </div>
 
 <!-- projects ON-->
-
+<script src="../menu.js"></script>
+<script src="../rounds.js"></script>
 
 @endsection
