@@ -548,7 +548,7 @@ line-height: 16rem;
 
 .elements{
   position: relative;
-  height: 95vw;
+  height: 80vw;
   right: 0%;
   transition: right 1s ease-in-out, display 2s ease-in-out;;
 }
@@ -610,7 +610,7 @@ line-height: 16rem;
   }
   /* intro */
   .intro{
-    width: 50%;
+    width: 60%;
     min-height: 48vw;
     padding-top: 4.5%;
   }
