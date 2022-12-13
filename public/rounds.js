@@ -53,6 +53,7 @@ const elements = document.querySelector('.elements');
 const projectmenu = document.querySelector('.project-menu');
 const grid = document.querySelector('.grid');
 const mentions = document.querySelector('.mentions');
+const menutoggle = document.querySelector('.nav-menu');
 
 
 [document.querySelector('.toggle-overlay'), document.querySelector('.menu-item.retour')].forEach(item => {
@@ -62,6 +63,7 @@ const mentions = document.querySelector('.mentions');
     elements.classList.toggle('active');
     projectmenu.classList.toggle('active');
     animationprojects.classList.toggle('active');
+    menutoggle.classList.toggle('active');
 
     body.classList.toggle('active');
     mentions.classList.toggle('active');

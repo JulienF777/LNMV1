@@ -549,7 +549,7 @@ line-height: 16rem;
 .elements{
   position: relative;
   height: 80vw;
-  right: 4%;
+  right: -4%;
   transition: right 1s ease-in-out, display 2s ease-in-out;;
 }
 .elements.active{
@@ -725,6 +725,10 @@ line-height: 16rem;
     width: 55%;
     left: 22%;
   }
+  .nav-menu.active{
+    display: none;
+  }
+  
 }
 
 
