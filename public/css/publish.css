@@ -117,7 +117,53 @@ body{
 }
 }
 
+/* Css du genre */
+datalist {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  background: rgb(2,0,36);
+  background-image: none;
+  flex: 1;
+  padding: 0 .5em;
+  color:#fefadd;
+  cursor:pointer;
+  font-size: 1em;
+  font-family: 'comfortaa', sans-serif;
 
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  margin-top: 1vw;
+  position: relative;
+  display: flex;
+  height: 3em;
+  line-height: 3;
+  background: #fefadd;
+  overflow: hidden;
+  border-radius: .25em;
+  border: solid 0.2rem #fefadd;
+  border-radius: 5px;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: rgb(2,0,36);
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: rgb(2,0,36);
+}
 
 
 
