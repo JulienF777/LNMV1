@@ -1,17 +1,17 @@
 const t = JSON.parse(localStorage.getItem('projets'));
-console.log(t[1]);
+// console.log(t[1]);
 const urls=new Array();
 t.forEach(elt => urls.push(elt.img_url));
 // const urls = ['images/17.jpg','images/5.jpg','images/6.jpg','images/2.jpg','images/1.jpg','images/3.jpg','images/4.jpg','images/7.jpg','images/8.jpg','images/9.jpg'];
-console.log(urls);
+// console.log(urls);
 
 const genre=new Array();
 t.forEach(elt => genre.push(elt.genre));
-console.log(genre);
+// console.log(genre);
 
 const lien=new Array();
 t.forEach(elt => lien.push(elt.lien));
-console.log(lien);
+// console.log(lien);
 
 
 let minleft = 2;
@@ -179,7 +179,6 @@ function triweb(){
 
       gridweb.append(projet1);
       body.append(gridweb);
-      console.log('gridweb')
       moreproject()
       projet1.addEventListener('click', afficherprojet)
           function afficherprojet(){
@@ -245,7 +244,6 @@ function trivideo(){
 
       gridvideo.append(projet1);
       body.append(gridvideo);
-      console.log('gridvideo')
 
       projet1.addEventListener('click', afficherprojet)
           function afficherprojet(){
@@ -297,7 +295,6 @@ function triimage   (){
 
       gridimages.append(projet1);
       body.append(gridimages);
-      console.log('gridimages')
       projet1.addEventListener('click', afficherprojet)
           function afficherprojet(){
             lien1.classList.toggle('active');
@@ -366,7 +363,6 @@ function moreproject(){
           projet1.append(lien1);
 
        grid.append(projet1);
-       console.log('moreprojects()')
      }
      // height20p = height20p + 625;
    }
