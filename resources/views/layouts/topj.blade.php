@@ -17,7 +17,7 @@
 <body>
 
 @section('topMenu')
-  @include('layouts.topMenuC')
+  @include('layouts.topMenu')
 @show
 
   <section class="content">
