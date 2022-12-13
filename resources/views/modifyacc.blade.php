@@ -6,7 +6,6 @@
 
 @section('content')
 <div class="modifyacc">
-    <a href="/createur/{{$id}}" class="lienretour">Retour</a>
     <form action='/modifyaccT' method='POST'>
         @csrf
         <input type="link" name='linkedin' placeholder="Lien vers votre compte linkedin">
