@@ -54,6 +54,7 @@ class Projets extends Controller
             $p = new projetsDB();
             $p ->idAuteur = session('id');
             $p ->titre = $_POST['nom'];
+            $p ->genre = $_POST['genre'];
             $p ->img_url=$file;
             $p ->dateEcrit=date("Y-m-d H:i:s");
             $p ->anneeReal=$_POST['anneeReal'];
