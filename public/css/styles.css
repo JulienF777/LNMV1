@@ -610,7 +610,7 @@ line-height: 16rem;
   }
   /* intro */
   .intro{
-    width: 50%;
+    width: 60%;
     min-height: 48vw;
     padding-top: 4.5%;
   }
@@ -728,7 +728,7 @@ line-height: 16rem;
   .nav-menu.active{
     display: none;
   }
-  
+
 }
 
 
@@ -783,7 +783,7 @@ line-height: 16rem;
   display: flex;
   justify-content: center;
   align-items: center; 
-  z-index: 4;
+  z-index: 12;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
