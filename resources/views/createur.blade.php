@@ -1,4 +1,4 @@
-@extends('layouts.topjc')
+@extends('layouts.appV1')
 
 @section('css')
   <link href="/css/projets.css" rel="stylesheet">

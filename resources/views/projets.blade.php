@@ -1,4 +1,4 @@
-@extends('layouts.topjc')
+@extends('layouts.appV1')
 
 @section('css')
   <link href="/css/projets.css" rel="stylesheet">
@@ -7,41 +7,28 @@
 
 @section('content')
 <div class="allProjects">
-  @forelse($projets as $a)
-    @if($a->anonyme==1)
+    @if(isset($projets->anonyme))
     <article class="post">
       <div>
         <span class="auteur">anonyme</span>
       </div>
-      <a href="{{$a->lien}}"><img src=".{{$a->img_url}}" /></a>
-      <h3>{{$a->titre}}</h3>
+      <a href="{{$projets->lien}}"><img src=".{{$projets->img_url}}" /></a>
+      <h3>{{$projets->titre}}</h3>
     </article>
     @else
     <article class="post">
       <div>
-        <a href='/createur/{{$a->idAuteur}}'><span class="auteur">{{$a->prenom}} {{$a->nom}}</span></a>
+        <a href='/createur/{{$projets->idAuteur}}'><span class="auteur">{{$projets->prenom}} {{$projets->nom}}</span></a>
       </div>
-      @if(isset($a->lien))
-        <a href="{{$a->lien}}"><img src=".{{$a->img_url}}" /></a>
+      @if(isset($projets->lien) AND $projets->lien !=="null")
+        <a href="{{$projets->lien}}"><img src=".{{$projets->img_url}}"/></a>
       @else
-      <img src=".{{$a->img_url}}" />
+      <img src=".{{$projets->img_url}}" />
       @endif
-      <h3>{{$a->titre}}</h3>
-      <div class="desc">
-        {{-- <a href=""><i class='bx bx-message-rounded-dots'></i></a>
-        <a href=""><i class='bx bx-heart'></i></a> --}}
-      </div>
+      <h3>{{$projets->titre}}</h3>
     </article>
-  @endif
-  @empty
-    <span class="finProjets">Vous avez atteint nos limites, aidez nous a les dépasser en  <a href="/publish">déposant vos projets</a> </span>
-  @endforelse
-</div>
 
-  <div class="selectpage">
-    <a href="{{$url}}{{$nbpage-1}}" class="selectorP">-</a>
-    <span>{{$nbpage}}</span>
-    <a href="{{$url}}{{$nbpage+1}}" class="selectorP">+</a>
-  </div>
+    </div>
+    @endif
 
 @endsection

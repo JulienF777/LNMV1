@@ -11,26 +11,6 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class Users extends Controller
 {
-    public function test(){
-        $id=session('id');
-        $result=UsersDB::select('qrcodetoken','prenom')->where('id',$id)->get();
-        if($result->count()==1){
-            $token=$result->first()->qrcodetoken;
-            $lienimg=url('/checkqrcode').'/'.$token;
-            $qrcode = QrCode::size(200)
-                            ->color(254,250,221)
-                            ->backgroundcolor(13,15,44)
-                            ->generate($lienimg);
-
-            $qrcode = base64_encode($qrcode);
-            $pdf = PDF::loadView('test',['qrcode'=>$qrcode])->setOptions(['defaultFont' => 'sans-serif']);
-            return $pdf->stream();
-        }else{
-            return redirect('/');
-        }
-        
-        
-    }
     function login(){
         if(session('id')){
             return redirect('/');
