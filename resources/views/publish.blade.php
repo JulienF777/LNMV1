@@ -25,7 +25,7 @@
       <option value="-1">--Le genre de votre projet--</option>
       <option value="web">Web</option>
       <option value="video">Video</option>
-      <option value="image">Image</option>
+      <option value="images">Image</option>
     </select>
     <label class="anonyme" for="anonyme"><input type="checkbox" id="anonyme" name="anonyme" value="anonyme"> Poster anonymement</label>
     <input type='submit' name='publish' value='Publier'>
