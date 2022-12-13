@@ -260,7 +260,7 @@ function trivideo(){
 
 let images = document.getElementById('triimage');
 images.addEventListener('click', triimage)
-function triimages(){
+function triimage(){
   const grid = document.querySelector(".grid");
   grid.remove();
     let gridimages = document.createElement('div');
