@@ -1,7 +1,7 @@
 @extends($layout)
 
 @section('css')
-<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/public/css/styles.css">
 @endsection
 
 @section('content')
@@ -75,7 +75,7 @@
 </div>
 
 <!-- projects ON-->
-<script src="../menu.js"></script>
-<script src="../rounds.js"></script>
+<script src="menu.js"></script>
+<script src="rounds.js"></script>
 
 @endsection

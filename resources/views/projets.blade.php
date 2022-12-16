@@ -1,7 +1,7 @@
 @extends('layouts.appV1')
 
 @section('css')
-  <link href="/css/projets.css" rel="stylesheet">
+  <link href="/public/css/projets.css" rel="stylesheet">
 @endsection
 
 

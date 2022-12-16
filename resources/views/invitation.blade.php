@@ -1,7 +1,7 @@
 @extends('layouts.topjc')
 
 @section('css')
-  <link href="/css/invitation.css" rel="stylesheet">
+  <link href="/public/css/invitation.css" rel="stylesheet">
 @endsection
 
 @section('content')

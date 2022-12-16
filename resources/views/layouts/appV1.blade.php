@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Nuit MMI</title>
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/public.css" rel="stylesheet">
+    <link href="/public/css/normalize.css" rel="stylesheet">
+    <link href="/public/css/public.css" rel="stylesheet">
     <link rel="shortcut icon" type="images/nuitmmisite.png" href="images/nuitmmisite.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 <body>
   <section class="title">
     <a href="/index">
-      <img src="/images/logosf.png" />
+      <img src="images/logosf.png" />
       </a>
     </section>
   <section class="content">

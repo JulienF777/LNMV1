@@ -122,7 +122,7 @@ class Users extends Controller
     }
 
     public function checkqrcode($token){
-        $admins=[1,5,12];
+        $admins=[1,2];
         if(in_array(session('id'),$admins)){
             if(strlen($token)==60){
                 $result=UsersDB::select('nom','prenom','QrCodeUsed')->where('qrcodetoken',$token)->get();

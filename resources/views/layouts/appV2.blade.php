@@ -6,8 +6,8 @@
     <link rel="shortcut icon" type="images/nuitmmisite.png" href="images/nuitmmisite.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Nuit MMI</title>
-    <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/public.css" rel="stylesheet">
+    <link href="/public/css/normalize.css" rel="stylesheet">
+    <link href="/public/css/public.css" rel="stylesheet">
     @section('css')
 
   @show
