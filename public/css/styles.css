@@ -203,6 +203,7 @@ li{
     text-decoration: underline;
   }
   .img1{
+    margin-top: 16vw;
     border-radius: 0 !important;
     aspect-ratio:initial !important;
     
@@ -210,9 +211,10 @@ li{
   }
   .p.active{
     position: fixed;
-    top: 25%;
-    left: 0;
     width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     z-index: 10;
   }
 }
@@ -718,6 +720,7 @@ line-height: 16rem;
     text-decoration: underline;
   }
   .img1{
+    margin-top: 6vw;
     border-radius: 0 !important;
     aspect-ratio:initial !important;
     max-height: 32vw;
@@ -726,8 +729,11 @@ line-height: 16rem;
   }
   .p.active{
     position: fixed;
-    width: 55%;
-    left: 22%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
   }
   .nav-menu.hide{
     display: none;
